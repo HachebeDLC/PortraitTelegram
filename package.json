@@ -1,0 +1,34 @@
+{
+  "name": "PortraitBot",
+  "version": "1.0.0",
+  "description": "Bot de hacer llorar a lesbianas",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "tsc": "tsc",
+    "start:dev": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HachebeDLC/PortraitTelegramBot.git"
+  },
+  "keywords": [
+    "lepe",
+    "telegram",
+    "bot"
+  ],
+  "author": "HachebeDLC",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HachebeDLC/PortraitTelegramBot/issues"
+  },
+  "homepage": "https://github.com/HachebeDLC/PortraitTelegramBot#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "dotenv": "^8.2.0",
+    "telegraf": "^3.36.0"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.2"
+  }
+}
