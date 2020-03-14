@@ -6,7 +6,7 @@
   "scripts": {
     "test": "test",
     "tsc": "tsc",
-    "start:dev": "node index.js"
+    "start:dev": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -26,6 +26,8 @@
   "dependencies": {
     "axios": "^0.19.2",
     "dotenv": "^8.2.0",
+    "node-fetch": "^2.6.0",
+    "nodemon": "^2.0.2",
     "telegraf": "^3.36.0"
   },
   "devDependencies": {
