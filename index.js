@@ -6,7 +6,7 @@ const Markup = require('telegraf/markup')
 
 arrayPregunta = []
 const bot = new Telegraf(process.env.BOT_TOKEN)
-bot.start((ctx) => ctx.reply(`Coming straight from P.28 Discord, comes a new challenger!`))
+//bot.start((ctx) => ctx.reply(`Coming straight from P.28 Discord, comes a new challenger!`))
 bot.help((ctx) => ctx.reply(`Questions to @HachebeDLC`))
 
 bot.command('sophie', (ctx) => {
