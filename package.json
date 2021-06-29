@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/HachebeDLC/PortraitTelegramBot#readme",
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "dotenv": "^8.2.0",
     "node-fetch": "^2.6.0",
     "nodemon": "^2.0.2",
