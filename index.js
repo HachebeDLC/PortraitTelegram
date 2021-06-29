@@ -34,14 +34,17 @@ bot.on('inline_query', async ({
         inlineQuery,
         answerInlineQuery
 }) => {
-
+        sophiePhoto = await getImageInline('DGJuM0i'),
+                mariannePhoto = await getImageInline('v7zL3ep')
+        heloissePhoto = await getImageInline('71WUFaO')
+        comtessePhoto = await getImageInline('WGxm33x')
         const recipes = [{
                         type: 'photo',
                         id: '0',
                         title: 'sophie',
                         thumb_url: 'https://i.imgur.com/vyAuH4Bm.png',
                         // photo_url: 'https://i.imgur.com/vyAuH4B.png',
-                        photo_url: await getImageInline('DGJuM0i'),
+                        photo_url: sophiePhoto
 
 
                 },
@@ -51,7 +54,7 @@ bot.on('inline_query', async ({
                         title: 'marianne',
                         thumb_url: 'https://i.imgur.com/i3iq3fQm.png',
                         // photo_url: 'https://i.imgur.com/i3iq3fQ.png',
-                        photo_url: await getImageInline('v7zL3ep')
+                        photo_url: mariannePhoto
 
                 },
                 {
@@ -60,7 +63,7 @@ bot.on('inline_query', async ({
                         title: 'heloisse',
                         thumb_url: 'https://i.imgur.com/wsqa3Ihm.png',
                         // photo_url: 'https://i.imgur.com/wsqa3Ih.png',
-                        photo_url: await getImageInline('71WUFaO')
+                        photo_url: heloissePhoto
 
                 },
                 {
@@ -69,7 +72,7 @@ bot.on('inline_query', async ({
                         title: 'comtesse',
                         thumb_url: 'https://i.imgur.com/2rYW3Vfm.png',
                         // photo_url: 'https://i.imgur.com/2rYW3Vf.png',
-                        photo_url: await getImageInline('WGxm33x')
+                        photo_url: comtessePhoto
 
                 }, {
 
@@ -109,12 +112,12 @@ function getImage(album, ctx) {
                 }
         }).then(x => {
                 img = x.data.data[Math.floor(Math.random() * x.data.data.length)].link
-                        ctx.replyWithPhoto(img);
-                
+                ctx.replyWithPhoto(img);
+
         })
 }
 
-async function getImageInline (album){
+async function getImageInline(album) {
         var list = await axios.get(`https://api.imgur.com/3/album/${album}/images`, {
                 headers: {
                         Authorization: 'Client-ID d4c0728985acdf7'
