@@ -95,7 +95,7 @@ bot.on('inline_query', async ctx => {
         console.log('Query',ctx.inlineQuery.query);
         const search = recipes.filter(x => x.title.includes(ctx.inlineQuery.query));
         console.log('Result', search);
-        ctx.answerInlineQuery(search && search.length? search : [])
+        ctx.answerInlineQuery(recipes)
 })
 
 bot.on('chosen_inline_result', ({
