@@ -123,9 +123,8 @@ async function getImageInline(album) {
                         Authorization: 'Client-ID d4c0728985acdf7'
                 }
         });
-        var img = list.data.data[Math.floor(Math.random() * list.data.data.length)].link;
-        img.replace('.png', '.jpg')
-        return img;
+        const img = list.data.data[Math.floor(Math.random() * list.data.data.length)].link;
+        return img.replace('.png', '.jpg');
 }
 // bot.telegram.setWebhook(`${URL}/bot${BOT_TOKEN}`);
 // bot.startWebhook(`/bot${BOT_TOKEN}`, null, PORT);
