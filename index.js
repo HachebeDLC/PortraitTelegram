@@ -3,7 +3,9 @@ require('dotenv').config()
 const axios = require('axios').default;
 const fetch = require('node-fetch')
 const Markup = require('telegraf/markup')
-
+const BOT_TOKEN = process.env.BOT_TOKEN || "";
+const PORT = process.env.PORT || 3000;
+const URL = process.env.URL 
 arrayPregunta = []
 const bot = new Telegraf(process.env.BOT_TOKEN)
 //bot.start((ctx) => ctx.reply(`Coming straight from P.28 Discord, comes a new challenger!`))
@@ -91,7 +93,7 @@ bot.on('inline_query', async ctx => {
         ];
         console.log('Values',recipes);
         console.log('Query',ctx.inlineQuery.query);
-        var search = recipes.filter(x => x.title.includes(ctx.inlineQuery.query));
+        var search = recipes.map(x => x.title.includes(ctx.inlineQuery.query));
         console.log('Result', search);
         ctx.answerInlineQuery(search)
 })
@@ -124,5 +126,7 @@ async function getImageInline(album) {
         var img = list.data.data[Math.floor(Math.random() * list.data.data.length)].link;
         return img;
 }
+bot.telegram.setWebhook(`${URL}/bot${BOT_TOKEN}`);
+bot.startWebhook(`/bot${BOT_TOKEN}`, null, PORT);
 bot.launch()
 console.log('Bot iniciado');
