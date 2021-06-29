@@ -41,8 +41,8 @@ bot.on('inline_query', async ctx => {
                         type: 'photo',
                         id: 'sophie',
                         title: 'sophie',
-                        thumb_url: 'https://i.imgur.com/vyAuH4Bm.png',
-                        // photo_url: 'https://i.imgur.com/vyAuH4B.png',
+                        thumb_url: 'https://i.imgur.com/vyAuH4Bm.jpg',
+                        // photo_url: 'https://i.imgur.com/vyAuH4B.jpg',
                         photo_url: sophiePhoto
 
 
@@ -51,8 +51,8 @@ bot.on('inline_query', async ctx => {
                         type: 'photo',
                         id: 'marianne',
                         title: 'marianne',
-                        thumb_url: 'https://i.imgur.com/i3iq3fQm.png',
-                        // photo_url: 'https://i.imgur.com/i3iq3fQ.png',
+                        thumb_url: 'https://i.imgur.com/i3iq3fQm.jpg',
+                        // photo_url: 'https://i.imgur.com/i3iq3fQ.jpg',
                         photo_url: mariannePhoto
 
                 },
@@ -60,8 +60,8 @@ bot.on('inline_query', async ctx => {
                         type: 'photo',
                         id: 'heloisse',
                         title: 'heloisse',
-                        thumb_url: 'https://i.imgur.com/wsqa3Ihm.png',
-                        // photo_url: 'https://i.imgur.com/wsqa3Ih.png',
+                        thumb_url: 'https://i.imgur.com/wsqa3Ihm.jpg',
+                        // photo_url: 'https://i.imgur.com/wsqa3Ih.jpg',
                         photo_url: heloissePhoto
 
                 },
@@ -69,7 +69,7 @@ bot.on('inline_query', async ctx => {
                         type: 'photo',
                         id: 'comtesse',
                         title: 'comtesse',
-                        thumb_url: 'https://i.imgur.com/2rYW3Vfm.png',
+                        thumb_url: 'https://i.imgur.com/2rYW3Vfm.jpg',
                         // photo_url: 'https://i.imgur.com/2rYW3Vf.png',
                         photo_url: comtessePhoto
 
