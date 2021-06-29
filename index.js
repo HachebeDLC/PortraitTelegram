@@ -30,12 +30,9 @@ bot.command('looking', (ctx) => {
 bot.command('baguette', (ctx) => {
         ctx.replyWithPhoto('https://purepng.com/public/uploads/medium/purepng.com-baguette-breadfood-bakery-fresh-tasty-organic-bread-health-breakfast-wheat-barley-941524622910nebfb.png')
 })
-bot.on('inline_query', async ({
-        inlineQuery,
-        answerInlineQuery
-}) => {
+bot.on('inline_query', async ctx => {
         sophiePhoto = await getImageInline('DGJuM0i'),
-                mariannePhoto = await getImageInline('v7zL3ep')
+        mariannePhoto = await getImageInline('v7zL3ep')
         heloissePhoto = await getImageInline('71WUFaO')
         comtessePhoto = await getImageInline('WGxm33x')
         const recipes = [{
@@ -92,10 +89,11 @@ bot.on('inline_query', async ({
 
                 }
         ];
-        console.log(recipes);
-        console.log(inlineQuery)
-        var search = recipes.filter(x => x.title.includes(inlineQuery.query));
-        return answerInlineQuery(search)
+        console.log('Values',recipes);
+        console.log('Query',ctx.inlineQuery.query);
+        var search = recipes.filter(x => x.title.includes(ctx.inlineQuery.query));
+        console.log('Result', search);
+        ctx.answerInlineQuery(search)
 })
 
 bot.on('chosen_inline_result', ({
