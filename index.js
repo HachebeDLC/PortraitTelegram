@@ -124,6 +124,7 @@ async function getImageInline(album) {
                 }
         });
         var img = list.data.data[Math.floor(Math.random() * list.data.data.length)].link;
+        img.replace('.png', '.jpg')
         return img;
 }
 // bot.telegram.setWebhook(`${URL}/bot${BOT_TOKEN}`);
