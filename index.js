@@ -93,7 +93,7 @@ bot.on('inline_query', async ctx => {
         ];
         console.log('Values',recipes);
         console.log('Query',ctx.inlineQuery.query);
-        var search = recipes.map(x => x.title.includes(ctx.inlineQuery.query));
+        var search = recipes.filter(x => x.title.includes(ctx.inlineQuery.query));
         console.log('Result', search);
         ctx.answerInlineQuery(search)
 })
@@ -126,7 +126,7 @@ async function getImageInline(album) {
         var img = list.data.data[Math.floor(Math.random() * list.data.data.length)].link;
         return img;
 }
-bot.telegram.setWebhook(`${URL}/bot${BOT_TOKEN}`);
-bot.startWebhook(`/bot${BOT_TOKEN}`, null, PORT);
+// bot.telegram.setWebhook(`${URL}/bot${BOT_TOKEN}`);
+// bot.startWebhook(`/bot${BOT_TOKEN}`, null, PORT);
 bot.launch()
 console.log('Bot iniciado');
