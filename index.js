@@ -39,7 +39,7 @@ bot.on('inline_query', async ctx => {
         comtessePhoto = await getImageInline('WGxm33x')
         const recipes = [{
                         type: 'photo',
-                        id: '0',
+                        id: 'sophie',
                         title: 'sophie',
                         thumb_url: 'https://i.imgur.com/vyAuH4Bm.png',
                         // photo_url: 'https://i.imgur.com/vyAuH4B.png',
@@ -49,7 +49,7 @@ bot.on('inline_query', async ctx => {
                 },
                 {
                         type: 'photo',
-                        id: '1',
+                        id: 'marianne',
                         title: 'marianne',
                         thumb_url: 'https://i.imgur.com/i3iq3fQm.png',
                         // photo_url: 'https://i.imgur.com/i3iq3fQ.png',
@@ -58,7 +58,7 @@ bot.on('inline_query', async ctx => {
                 },
                 {
                         type: 'photo',
-                        id: '2',
+                        id: 'heloisse',
                         title: 'heloisse',
                         thumb_url: 'https://i.imgur.com/wsqa3Ihm.png',
                         // photo_url: 'https://i.imgur.com/wsqa3Ih.png',
@@ -67,7 +67,7 @@ bot.on('inline_query', async ctx => {
                 },
                 {
                         type: 'photo',
-                        id: '3',
+                        id: 'comtesse',
                         title: 'comtesse',
                         thumb_url: 'https://i.imgur.com/2rYW3Vfm.png',
                         // photo_url: 'https://i.imgur.com/2rYW3Vf.png',
@@ -93,9 +93,9 @@ bot.on('inline_query', async ctx => {
         ];
         console.log('Values',recipes);
         console.log('Query',ctx.inlineQuery.query);
-        var search = recipes.filter(x => x.title.includes(ctx.inlineQuery.query));
+        const search = recipes.filter(x => x.title.includes(ctx.inlineQuery.query));
         console.log('Result', search);
-        ctx.answerInlineQuery(search)
+        ctx.answerInlineQuery(search && search.length? search : [])
 })
 
 bot.on('chosen_inline_result', ({
